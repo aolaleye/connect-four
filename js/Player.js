@@ -24,15 +24,19 @@ class Player {
         return tokens;
     }
 
-    unusedTokens() {
-        const unusedTokens = this.tokens.filter(token => this.tokens.dropped === false);
-        
-        return unusedTokens;
+    /**
+     * Gets all tokens that haven't been dropped
+     * @return  {array}  Array of unused tokens
+     */
+    get unusedTokens() {
+        return this.tokens.filter(token => !token.dropped);
     }
 
-    activeToken() {
-        this.unusedTokens();
-
-        return unusedTokens[0];
+    /**
+     * Gets the active token by returning the first token in the array of unused tokens
+     * @return  {Object}  First token object in the array of unused tokens
+     */
+    get activeToken() {
+        return this.unusedTokens[0];
     }
 }
