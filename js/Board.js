@@ -12,10 +12,10 @@ class Board {
     createSpaces() {
         const spaces = [];
 
-        for (i = 0; i < this.columns; i++) {
+        for (let x = 0; x < this.columns; x++) {
             const column = [];
 
-            for (j = 0; i < this.rows; j++) {
+            for (let y = 0; y < this.rows; y++) {
                 const space = new Space(x, y);
                 column.push(space);
             } 

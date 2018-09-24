@@ -16,7 +16,7 @@ class Player {
 
         const tokens = [];
         
-        for (i = 0; i < num; i++) {
+        for (let i = 0; i < num; i++) {
             let token = new Token(i, this);
             tokens.push(token);
         } 

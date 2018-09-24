@@ -16,9 +16,33 @@ class Game {
         return players;
     }
 
-    startGame() {}
-
     get activePlayer() {
         return this.players.find(player => player.active);
     }
+
+    /** 
+     * Initializes game. 
+     */
+    startGame() {
+        this.board.drawHTMLBoard();
+        this.activePlayer.activeToken.drawHTMLToken();
+        this.ready = true;
+    }
+
+    /**
+     * Branches code, depending on what key player presses
+     * @param   {Object}    e - Keydown event object
+     */
+    handleKeydown(e) {
+        if (this.ready) {
+            if (e.key === 'ArrowLeft') {
+                this.activePlayer.activeToken.moveLeft();
+            } else if (e.key === 'ArrowRight') {
+                this.activePlayer.activeToken.moveRight(this.board.columns);
+            } else if (e.key === 'ArrowDown') {
+                // play token
+            }
+        }
+    }
+
 }
