@@ -33,6 +33,6 @@ class Player {
     activeToken() {
         this.unusedTokens();
 
-        
+        return unusedTokens[0];
     }
 }

@@ -17,4 +17,16 @@ class Game {
     }
 
     startGame() {}
+
+    activePlayer() {
+        let activePlayer;
+
+        for (i = 0; i < this.players; i++) {
+            if (this.players[i].active === true) {
+                this.players[i] = activePlayer;
+            }
+        }
+
+        return activePlayer;
+    }
 }
