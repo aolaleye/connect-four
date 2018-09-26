@@ -11,7 +11,7 @@ class Token {
      * @return  {number}   Left offset of token object's htmlToken.
      */
     get htmlToken() {
-        return document.getElementById(this.Id);
+        return document.getElementById(this.id);
     }
 
     /** 
