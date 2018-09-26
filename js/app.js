@@ -8,11 +8,11 @@ document.getElementById('begin-game').addEventListener('click', () => {
 
     document.getElementById('begin-game').style.display = 'none';
     document.getElementById('play-area').style.opacity = '1';
-})
+});
 
 /** 
  * Listen for keyboard presses
  */
-document.addEventListener('keydown', function(event){
+document.addEventListener('keydown', event => {
     game.handleKeydown(event); 
 });
